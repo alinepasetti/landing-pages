@@ -1,3 +1,5 @@
+import * as Styled from './styles';
+
 export const Home = () => {
-  return <div>oi</div>;
+  return <Styled.Wrapper background={'pink'}>oi</Styled.Wrapper>;
 };
