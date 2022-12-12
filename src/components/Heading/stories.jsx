@@ -4,7 +4,7 @@ export default {
   title: 'Heading',
   component: Heading,
   args: {
-    children: 'olá',
+    children: 'O texto está branco',
   },
   argTypes: { children: { type: 'string' } },
   parameters: {
@@ -15,4 +15,11 @@ export default {
 };
 
 export const Light = (args) => <Heading {...args} />;
-export const Dark = (args) => <Heading {...args} light={false} />;
+export const Dark = (args) => <Heading {...args} />;
+
+Dark.args = {
+  children: 'O texto está vermelho',
+  lightMode: false,
+  uppercase: true,
+  size: 'small',
+};
