@@ -39,11 +39,11 @@ describe('<MenuLink />', () => {
       .c0::after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: 0.76rem;
         left: 50%;
         width: 0;
         height: 0.2rem;
-        background: #0A1128;
+        background: #dc143c;
         -webkit-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out;
       }
