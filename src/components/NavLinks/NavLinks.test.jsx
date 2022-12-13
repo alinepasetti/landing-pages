@@ -26,7 +26,7 @@ describe('<NavLinks />', () => {
 
   it('should match snapshot', () => {
     const { container } = renderTheme(<NavLinks links={mock} />);
-    expect(container.lastChild).toMatchInlineSnapshot(`
+    expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         display: -webkit-box;
         display: -webkit-flex;
@@ -75,7 +75,7 @@ describe('<NavLinks />', () => {
         }
       }
 
-      <div
+      <nav
         class="c0"
       >
         <a
@@ -148,7 +148,7 @@ describe('<NavLinks />', () => {
         >
           Link 10
         </a>
-      </div>
+      </nav>
     `);
   });
 });

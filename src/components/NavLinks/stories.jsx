@@ -11,8 +11,8 @@ export default {
 
 export const Template = (args) => {
   return (
-    <nav>
+    <div>
       <NavLinks {...args} />
-    </nav>
+    </div>
   );
 };
