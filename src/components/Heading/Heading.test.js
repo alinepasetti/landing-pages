@@ -54,4 +54,27 @@ describe('<Heading />', () => {
     const h6 = container.querySelector('h6');
     expect(h6.tagName.toLowerCase()).toBe('h6');
   });
+
+  it('should render a text', () => {
+    const { container } = renderTheme(<Heading>texto</Heading>);
+    expect(container.firstChild).toMatchInlineSnapshot(`
+      .c0 {
+        color: #FFFFFF;
+        text-transform: none;
+        font-size: 6.4rem;
+      }
+
+      @media (max-width:768px) {
+        .c0 {
+          font-size: 4.8rem;
+        }
+      }
+
+      <h1
+        class="c0"
+      >
+        texto
+      </h1>
+    `);
+  });
 });
