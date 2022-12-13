@@ -11,7 +11,7 @@ describe('<NavLinks />', () => {
   });
 
   it('should not render links', () => {
-    renderTheme(<NavLinks links={[]} />);
+    renderTheme(<NavLinks />);
     expect(screen.queryAllByRole('link', { name: /link/i })).toHaveLength(0);
   });
 
