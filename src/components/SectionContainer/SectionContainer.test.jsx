@@ -4,12 +4,12 @@ import { SectionContainer } from '.';
 
 describe('<SectionContainer />', () => {
   it('should render', () => {
-    const { contaner } = renderTheme(
+    const { container } = renderTheme(
       <SectionContainer>
         <h1>Children</h1>
       </SectionContainer>,
     );
     expect(screen.getByRole('heading')).toBeInTheDocument();
-    expect(contaner).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

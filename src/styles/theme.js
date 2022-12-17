@@ -3,6 +3,7 @@ export const theme = {
     mainColor: '#0A1128',
     secondaryColor: '#dc143c',
     white: '#FFFFFF',
+    mediumGray: '#DDDDDD',
   },
   fonts: {
     default: '"Open Sans", sans-serif',
