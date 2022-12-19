@@ -2,7 +2,12 @@ import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from '../SectionContainer/styles';
 import { Title as Heading } from '../Heading/styles';
 
-export const Container = styled.div` ${({ theme }) => css`
+const menuVisible = () => css`
+  visibility: visible;
+  opacity: 1;
+`;
+
+export const Container = styled.div` ${({ theme, visible }) => css`
   position: fixed;
   z-index: 5;
   top: 0;
@@ -10,6 +15,7 @@ export const Container = styled.div` ${({ theme }) => css`
   right: 0;
   border-bottom: ${theme.colors.mediumGray};
   background: ${theme.colors.white};
+  transition: all 300ms ease-in-out;
 
   ${SectionContainer} {
     padding-top: 0;
@@ -23,6 +29,9 @@ export const Container = styled.div` ${({ theme }) => css`
 
   @media ${theme.media.medium} {
     height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    ${visible && menuVisible(theme)}
 
     ${SectionContainer} {
       display: grid;
@@ -53,6 +62,27 @@ export const MenuContainer = styled.div` ${({ theme }) => css`
   }
 `}`;
 
-export const Button = styled.div` ${({ theme }) => css`
+export const Button = styled.div` ${({ theme, visible }) => css`
+  z-index: 6;
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  top: 2rem;
+  right: 2rem;
+  background: ${theme.colors.mainColor};
+  color: ${theme.colors.white};
+  border: none;
+  display: none;
+  pointer-events: ${visible ? 'none' : 'all'};
 
+  @media ${theme.media.medium} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 `}`;
